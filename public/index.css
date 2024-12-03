@@ -22,29 +22,36 @@ main {
     padding: 20px;
 }
 
-form > label, input, button {
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form > section > label, input, button {
     margin: 1vh 0;
 }
 
 form > label {
     font-size: 1.5rem;
     font-weight: bold;
+    display: block;
 }
 
-form > input {
+form > section > input {
     border-radius: 10px;
     padding: 1vh;
     border: 2px solid #ccc;
-    width: calc(100% - 22px);
+    width: calc(100% - 122px);
     transition: border-color 0.3s;
 }
 
-form > input:focus {
+form > section > input:focus {
     border-color: #b030e3; 
     outline: none; 
 }
 
-form > button {
+form > section >  button {
     background-color: transparent;
     color: #5e1fa7;
     font-size: 1.2rem;
@@ -53,10 +60,9 @@ form > button {
     padding: 1vh 2vh;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-
 }
 
-form > button:hover {
+form > section > button:hover {
     color: #000;
     border-color: #5722d3;
 }
@@ -101,4 +107,9 @@ span {
 .button-container {
     display: flex; /* Ativa o Flexbox para os botões */
     gap: 0; /* Sem espaço entre os botões */
+}
+
+.input-container {
+    display: flex; /* Ativa o Flexbox para o contêiner do input e botão */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
 }
