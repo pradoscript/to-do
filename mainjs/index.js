@@ -67,5 +67,3 @@ form.addEventListener("submit", (ev) => {
     updateLocalStorage();
     input.value = "";
 });
-
-
